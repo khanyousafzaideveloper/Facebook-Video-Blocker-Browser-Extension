@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Hide Facebook Videos",
+  "version": "1.0",
+  "description": "This extension hides the Videos section on Facebook.",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "permissions": [
+    "https://www.facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
